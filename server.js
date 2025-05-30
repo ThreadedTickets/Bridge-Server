@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const server = new Bridge({
   port: parseInt(process.env["PORT"]),
-  authToken: "token",
+  authToken: process.env["AUTH_TOKEN"],
   totalShards: "auto", // The Total Shards of the Bot or 'auto'
   totalMachines: 1, // The Total Machines, where the Clusters will run
   shardsPerCluster: 16, // The amount of Internal Shards, which are in one Cluster
